@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Alert color="primary">
-        This is a primary alert — check it out!
+        LOAN RANGER — check it out!
       </Alert>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
