@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
+import './Terms.css';
+import Col from 'react-bootstrap/Col'
 
 
 
@@ -13,55 +15,41 @@ export class Terms extends React.Component {
             <div>
 
               <div className="container">
-                  <div className="row">
-                      <br/>
-                <br/>   
-                <br/>
+                <dic className="row">
+                  <div className="col-lg-12">
+                  <Form>
+  <Form.Row>
+    
 
-                <div>
+    <Form.Group as={Col} controlId="formGridPassword">
+      <Form.Label>Loan Amount</Form.Label>
+      <Form.Control type="text" placeholder="" />
+    </Form.Group>
+  </Form.Row>
 
-                <Card id="card" style={{ width: '50rem' }}>
-  <Card.Body>
-    <Card.Title>Mortgage Term</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-    <Card.Text>
-    <Form.Group>
-    <input type="hidden" name="wl" defaultValue="en" />
-    <label>
-      Purchase price: <input type="text" name="ma" defaultValue="250,000" /> $
-    </label>
-    <br />
-    <label>
-      Down payment: <input type="text" name="dp" defaultValue={10} /> %
-    </label>
-    <br />
-    <label>
-      Mortgage term: <input type="text" name="mt" defaultValue={30} /> years
-    </label>
-    <br />
-    <label>
-      Interest rate: <input type="text" name="ir" defaultValue="5.5" /> %
-    </label>
-    <br />  
-    <label>
-      Estimated Credit Score: <input type="text" name="cs" defaultValue="700" /> 
-    </label>  
+  <Form.Group controlId="formGridAddress1">
+    <Form.Label>Loan Purpose</Form.Label>
+    <Form.Control placeholder="" />
   </Form.Group>
-  <br />
-  <br />
 
-    </Card.Text>
-    <Link to=''>
-                <Button variant="danger">Next</Button>
-                </Link>  </Card.Body>
-    </Card>
-        </div>               
+  <Form.Group controlId="formGridAddress2">
+    <Form.Label>Employment Status</Form.Label>
+    <Form.Control placeholder="" />
+  </Form.Group>
 
-              
+  <Form.Group controlId="formGridAddress2">
+    <Form.Label>Credit Score</Form.Label>
+    <Form.Control placeholder="" />
+  </Form.Group> 
 
-
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
                   </div>
+                </dic>
               </div>
+              
           </div>
         );
     }
