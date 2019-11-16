@@ -7,7 +7,11 @@ import Qualifications from "./pages/Qualifications";
 import Results from "./pages/Results";
 import logo from './logo.svg';
 import './App.css';
-import { Alert } from 'reactstrap';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Home } from './pages/Home/index.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Terms } from './pages/Terms/Terms.js';
+import { Link } from 'react-router-dom'
 
 // function App() {
 //   return (
