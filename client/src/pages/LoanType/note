@@ -1,0 +1,6 @@
+<Transition in={this.state.in} timeout={150}>
+  {state => (
+      
+    <MyComponent className={`fade fade-${state}`} />
+  )}
+</Transition>
