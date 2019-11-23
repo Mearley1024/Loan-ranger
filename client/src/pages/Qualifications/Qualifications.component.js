@@ -48,7 +48,7 @@ export default class Qualifications extends React.Component {
 </Form>
 <br/>
                   </div>
-                </dic>
+                </div>
               </div>
               
           </div>
