@@ -1,13 +1,18 @@
-module.exports = function(sequelize, DataTypes) {
-    var User = sequelize.define("User", {
-        user_name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    });
-    return User;
-}
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    email: DataTypes.STRING
+  }, {});
+  User.associate = function (models) {
+    // associations can be defined here
+    User.hasOne(models.Lender, {
+      onDelete: "cascade"
+    })
+    User.hasMany(models.Match, {
+      onDelete: "cascade"
+    })
+  };
+  return User;
+};

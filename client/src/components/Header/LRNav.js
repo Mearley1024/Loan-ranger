@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
@@ -34,5 +34,5 @@ function LRNav() {
   );
 }
 
-export LRNav;
+export default LRNav;
 
