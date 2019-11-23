@@ -15,6 +15,7 @@ class Results extends Component {
         axios.get(`/api/loan/${key}`)
             .then(() => {
 
+
             })
             .catch((err => console.log(err)))
     }
