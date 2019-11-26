@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function EmptyList(){
     return(
+        <div>
         <Card.Header as="h5">Loan List</Card.Header>
          <Card.Body>
              <Card.Title>No Loans to Display</Card.Title>
@@ -12,6 +13,6 @@ export default function EmptyList(){
              </Card.Text>
              <Button variant="primary">Go somewhere</Button>
             </Card.Body>
-     </Card>
+        </div>
     )
 }
