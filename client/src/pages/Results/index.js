@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Row, Col } from "../Grid";
+import ResultsCard, { ResultsCardItem } from "../../components/ResultsCards";
 
 class Results extends Component {
 
@@ -11,7 +13,8 @@ class Results extends Component {
         console.log(id);
 
         axios.get(`/api/loan/${key}`)
-            .then( () => {
+            .then(() => {
+
 
             })
             .catch((err => console.log(err)))
@@ -19,9 +22,18 @@ class Results extends Component {
 
     render() {
         return (
-            <div>
+            <Row>
+                <Col size="md-12">
+                    <ResultsCard>
 
-            </div>
+                        return (
+                            <div>
+                                <ResultsCardItem/>
+                            </div>
+                        )
+                    </ResultsCard>
+                </Col>
+            </Row>
         )
     }
 }
