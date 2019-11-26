@@ -1,6 +1,18 @@
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
+var loancontroller = require("../../controllers/loancontroller.js")
+
+router.route("/loan")
+.post(loancontroller.create)
+
+router.route("/loan/:key")
+.get(loancontroller.find)
+.put(loancontroller.update)
+
+=======
 var controller = require("../../controllers/loancontroller")
+>>>>>>> master
 
 // Middleware - Router Specific
 router.use(function timeLog (req, res, next) {
