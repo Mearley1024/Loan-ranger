@@ -13,7 +13,7 @@ export default class Qualifications extends React.Component {
             <div >
 
               <div className="container">
-                <dic className="row">
+                <div className="row">
                   <div className="col-lg-12">
                   <Form className="qualifications">
 
