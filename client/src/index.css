@@ -43,7 +43,7 @@ body{
 }
 
 #options{
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .qualifications {
@@ -51,3 +51,34 @@ body{
   opacity: .8;
 }
 
+.imgs {
+  height: 150px;
+  width: 150px;
+}
+
+#returndiv{
+  position: fixed;
+  margin-top: 40px;
+  margin-left: 20%;
+  margin-right: auto;
+  height: 700px;
+  width: 900px;
+  opacity: .8;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#card1 {
+background: transparent;
+color: red;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 15px;
+}
+
+#card2 {
+  background: rgb(226, 226, 226);
+}
+
+#card3 {
+ background: blue;
+}

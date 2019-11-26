@@ -10,6 +10,7 @@ import  Qualifications  from './pages/Qualifications/Qualifications.component.js
 // import { Link } from 'react-router-dom'
 import  LoanType  from './pages/LoanType/LoanType.component.js';
 import Header from './components/Header/navbar.component';
+import Results from './pages/Results/Results.component';
 
 
 
@@ -25,6 +26,9 @@ function App() {
         <Route exact path="/Terms" component={Terms} />
         <Route exact path="/LoanType" component={LoanType} />
         <Route exact path="/Qualifications" component={Qualifications} />
+        <Route exact path="/Results" component={Results} />
+
+
       </Switch>
     </Router>
 
