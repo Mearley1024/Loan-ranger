@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
-export default class Homes extends React.Component {
+export default class Home extends React.Component {
      render(){
         return(
           <Form className="login">

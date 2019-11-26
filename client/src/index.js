@@ -7,11 +7,8 @@ import * as serviceWorker from './serviceWorker';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
-
-
 
 
 export default class Homes extends React.Component {

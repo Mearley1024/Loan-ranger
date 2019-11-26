@@ -1,23 +1,26 @@
 import React from "react";
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-  } from 'reactstrap';
+import { Container, Row, Col } from "../Grid";
 
-const ResultsCard = (props) => {
+export function ResultsCard({children}) {
     return (
-        <div>
-            <Card>
-                <CardImg top width="100%" src="" alt="Card image cap" />
-                <CardBody>
-                    <CardTitle></CardTitle>
-                    <CardSubtitle></CardSubtitle>
-                    <CardText></CardText>
-                    <Button>Button</Button>
-                </CardBody>
-            </Card>
-        </div>
-    )
-};
+        <ul className="list-group">{children}</ul>
+    );
+}
 
-export default ResultsCard; 
+    export class ResultsCardItem extends React.Component {
+
+        render() {
+            console.log(this.props);
+            return (
+                <li>
+                    <Container>
+                        <Row>
+                            <Col size="xs-8 sm-9">
+                                {/* This is where information about the loan shall be placed */}
+                            </Col>
+                        </Row>
+                    </Container>
+                </li>
+            );
+        }
+    }
