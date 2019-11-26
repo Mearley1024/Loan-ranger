@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Row, Col } from "../../components/Grid";
+import Empty from "../../components/Empty";
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card'
 // import Img from 'react-image'
@@ -25,7 +27,7 @@ class Results extends Component {
     }
 
     getResults = key => {
-        console.log(id);
+        console.log(key);
 
         axios.get(`/api/loan/${key}`)
             .then( res => {
@@ -43,7 +45,7 @@ class Results extends Component {
               <Col size="md-12">
                 {(this.state.loans && this.state.loans > 0) ?
                 <ResultsCard>
-                  {this.state.loans.map(loans => {
+                  {this.state.loans.map(loan => {
                     return (
                       <div>
                         <ResultsCardItem 
