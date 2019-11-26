@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function EmptyList(){
     return(
-        <Card.Header as="h5"> <Img className='imgs' src={logo1} crossorigin="anonymous" />Loan List</Card.Header>
+        <Card.Header as="h5">Loan List</Card.Header>
          <Card.Body>
              <Card.Title>No Loans to Display</Card.Title>
              <Card.Text>
