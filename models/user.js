@@ -7,12 +7,14 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   User.associate = function (models) {
     // associations can be defined here
-    User.hasOne(models.Lender, {
-      onDelete: "cascade"
-    })
-    User.hasMany(models.Match, {
+  //  User.hasOne(models.Lender, {
+    //  onDelete: "cascade"
+ //   })
+    User.hasMany(models.Results, {
       onDelete: "cascade"
     })
   };
   return User;
 };
+
+// we need to add whateve qualify the user

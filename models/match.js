@@ -6,18 +6,14 @@ module.exports = (sequelize, DataTypes) => {
     amount: DataTypes.INTEGER,
     rate: DataTypes.INTEGER
   }, {});
-  Match.associate = function(models) {
+  Match.associate = function (models) {
     // associations can be defined here
-    Match.belongsTo(models.LoanType, {
+
+    Match.belongsTo(models.Results, {
       foreignKey: {
-          allowNull: false
+        allowNull: false
       }
-  })
-  Match.belongsTo(models.User, {
-      foreignKey: {
-          allowNull: false
-      }
-  })
+    })
 
   };
   return Match;

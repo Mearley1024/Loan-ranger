@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     loanType: DataTypes.STRING,
     terms: DataTypes.INTEGER,
     amount: DataTypes.INTEGER,
-    maxQuantity: DataTypes.INTEGER,
+    //maxQuantity: DataTypes.INTEGER,
     rates: DataTypes.INTEGER
   }, {});
   LoanType.associate = function(models) {
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
     }
     })
-    LoanType.hasMany(models.Match, {
+    LoanType.hasMany(models.Results, {
       onDelete:'cascade'
     })
     
