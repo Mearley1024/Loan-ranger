@@ -10,6 +10,7 @@ import { Auth0Provider } from "./react-auth0-spa";
 import config from "./auth_config.json";
 import history from "./utils/history";
 
+<<<<<<< HEAD
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // A function that routes the user to the right place
@@ -35,6 +36,10 @@ ReactDOM.render(
 );
 
 serviceWorker.unregister();
+=======
+
+ReactDOM.render(<App />, document.getElementById('root'));
+>>>>>>> 59e525deaf102e8b6ed945d51b6e4396bf077dcf
 
 
 export default class Homes extends React.Component {

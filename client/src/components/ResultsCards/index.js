@@ -16,10 +16,7 @@ export function ResultsCard({children}) {
                     <Container>
                         <Row>
                             <Col size="xs-8 sm-9">
-                                <h3>{this.props.institution}</h3>
-                                <p>{this.props.loan}</p>
-                                <p>{this.props.amount}</p>
-                                <p>{this.props.rate}</p>
+                                {/* This is where information about the loan shall be placed */}
                             </Col>
                         </Row>
                     </Container>
