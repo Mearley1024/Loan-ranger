@@ -10,14 +10,23 @@ import  Qualifications  from './pages/Qualifications/Qualifications.component.js
 // import { Link } from 'react-router-dom'
 import  LoanType  from './pages/LoanType/LoanType.component.js';
 import Header from './components/Header/navbar.component.js';
-
-
+import NavBar from "./components/Header/LoginNav";
+import { useAuth0 } from "./react-auth0-spa";
 
 
 
 function App() {
+  console.log('====loading=========')
+  console.log(useAuth0)
+  const { loading } = useAuth0();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <Router>
+    <Router >
+      <NavBar />
     <Header/> 
       <Switch>
       <Route exact path="/" component={Home} />
