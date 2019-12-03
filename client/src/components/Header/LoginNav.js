@@ -1,9 +1,10 @@
 import React from "react";
 import { useAuth0 } from "../../react-auth0-spa";
 
-console.log(useAuth0)
 const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const result = useAuth0();
+  console.log('navbar.result', result);
+  const { isAuthenticated, loginWithRedirect, logout } = result;
 
   return (
     <div>
