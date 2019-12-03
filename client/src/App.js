@@ -13,7 +13,9 @@ import Header from './components/Header/navbar.component';
 import Results from './pages/Results/Results.component';
 import NavBar from './components/Header/LoginNav';
 import { useAuth0 } from "./react-auth0-spa";
-
+import Profile from "./components/Profile";
+import history from "./utils/history";
+import PrivateRoute from "./components/PrivateRoute";
 
 
 function App() {
@@ -25,11 +27,13 @@ function App() {
     return <div>Loading...</div>;
   }
   return (
-    <Router>
+    <div className="App">
+    <Router history={history}>
     <Header />
     <NavBar/> 
       <Switch>
-      <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <PrivateRoute path="/profile" component={Profile} />
         <Route exact path="/Home" component={Home} />
         <Route exact path="/Terms" component={Terms} />
         <Route exact path="/LoanType" component={LoanType} />
@@ -37,6 +41,7 @@ function App() {
         <Route exact path="/Results" component={Results} />
       </Switch>
     </Router>
+    </div>
 
   );
 };
