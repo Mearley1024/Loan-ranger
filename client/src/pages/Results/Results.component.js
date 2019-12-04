@@ -26,12 +26,14 @@ class Results extends Component {
       this.setState({ loans: data.items });
     }
 
-    getResults = key => {
-        console.log(key);
+    getResults = id => {
+        console.log(id);
 
-        axios.get(`/api/loan/${key}`)
+        axios.get(`/api/loan/${id}`)
             .then( res => {
               console.log(res.data);
+
+              
             })
             .catch((err => console.log(err)))
     }

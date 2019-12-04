@@ -1,20 +1,30 @@
-const express = require("express");
-const router = express.Router();
-
-
 const db = require("../models");
 
-router.get("/loans", function(req, res) {
-    db.Loans.findAll({
-        include: [db.User],
-        
-    })
-    .then(function(dbLoan) {
-        var hbsObject = {
-            loan: dbLoan
-        };
-        return res.render("index", hbsObject);
-    });
-});
-
-router.post("/loan")
+module.exports = {
+    findAll: function(req, res) {
+        db.LoanType
+            .find(req.query)
+            .sort({ date: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    findById: function(req, res) {
+        db.LoanType
+            .findById(req.params.id)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    update: function(req, res) {
+        db.LoanType
+            .findOneAndUpdate({ _id: req.params.id }, req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    remove: function(req, res) {
+        db.LoanType
+            .findById({ _id: req.params.id })
+            .then(dbModel => dbModel.remove())
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    }
+};
