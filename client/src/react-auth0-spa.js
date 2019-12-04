@@ -1,3 +1,5 @@
+// These are all of the idomatic functions we might use, can add more along the way
+
 import React, { useState, useEffect, useContext } from "react";
 import createAuth0Client from "@auth0/auth0-spa-js";
 
@@ -11,9 +13,10 @@ export const Auth0Provider = ({
   onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
   ...initOptions
 }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState(null);
-  const [auth0Client, setAuth0] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState();
+  const [user, setUser] = useState();
+  const [key, setKey] = useState();
+  const [auth0Client, setAuth0] = useState();
   const [loading, setLoading] = useState(true);
   const [popupOpen, setPopupOpen] = useState(false);
 
@@ -33,7 +36,9 @@ export const Auth0Provider = ({
 
       if (isAuthenticated) {
         const user = await auth0FromHook.getUser();
+        const key = await auth0FromHook.getUser();
         setUser(user);
+        setKey(key.sub);
       }
 
       setLoading(false);
@@ -69,6 +74,7 @@ export const Auth0Provider = ({
       value={{
         isAuthenticated,
         user,
+        key,
         loading,
         popupOpen,
         loginWithPopup,
