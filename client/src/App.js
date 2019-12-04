@@ -34,10 +34,9 @@ function App() {
         <Route exact path="/" component={Home} />
         <PrivateRoute path="/profile" component={Profile} />
         <Route exact path="/Home" component={Home} />
-        <Route exact path="/Terms/:id" component={Terms} />
-        <Route exact path="/LoanType/:id" component={LoanType} />
-        {/* <Route exact path="/Qualifications/:id" component={Qualifications} /> */}
-        <Route exact path="/Results/:id" component={Results} />
+        <Route exact path="/Terms" component={Terms} />
+        <Route exact path="/LoanType" component={LoanType} />
+        <Route exact path="/Results" component={Results} />
       </Switch>
     </Router>
     </div>
