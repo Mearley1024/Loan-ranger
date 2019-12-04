@@ -3,9 +3,12 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
-
-
 export default class Home extends React.Component {
+    state = {
+
+    };
+
+    
      render(){
         return(
           <Form className="login">

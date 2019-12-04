@@ -15,6 +15,4 @@ router.route("/user/:id")
 .put(usercontroller.update)
 
 
-
-
 module.exports = router;
