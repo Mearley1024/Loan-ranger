@@ -2,6 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 export default class LoanType2 extends React.Component {
     state = {
@@ -15,6 +16,11 @@ export default class LoanType2 extends React.Component {
             loanType
         }
         console.log('data', data)
+        axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
+        .then(response => {console.log(response)
+            })
+            .catch(error => {console.log(error)
+            })
 
     }
 

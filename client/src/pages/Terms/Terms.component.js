@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
 import Col from 'react-bootstrap/Col'
+import axios from 'axios';
+
 
 
 
@@ -26,6 +28,12 @@ export default class Terms extends React.Component {
         phoneNumber
       }
       console.log('data', data)
+      axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
+      .then(response => {console.log(response)
+          })
+          .catch(error => {console.log(error)
+          })
+
     }
 
     handleInputChange = (event) => {

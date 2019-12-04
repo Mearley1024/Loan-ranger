@@ -24,8 +24,6 @@ function App() {
         <Route exact path="/Terms" component={Terms} />
         <Route exact path="/LoanType" component={LoanType} />
         <Route exact path="/Results" component={Results} />
-
-
       </Switch>
     </Router>
 
