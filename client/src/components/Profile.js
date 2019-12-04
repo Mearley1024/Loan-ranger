@@ -2,11 +2,10 @@
 
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
-import LoanType2 from "./loanType/LoanType2.component";
-import LoanType1 from "./loanType/LoanType1.component";
+import { User } from "../components/User/User.js"
 
 const Profile = () => {
-  const { loading, user } = useAuth0();
+  const { loading, user, key } = useAuth0();
 
   if (loading || !user) {
     return <div>Loading...</div>;
