@@ -29,10 +29,11 @@ class Results extends Component {
     getResults = id => {
         console.log(id);
 
-        axios.get(`/api/loan/${id}`)
+        axios.get(`/loancontroller`)
             .then( res => {
               console.log(res.data);
 
+              
               
             })
             .catch((err => console.log(err)))
