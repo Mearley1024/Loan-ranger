@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import  Home  from './pages/Home/Home.component.js';
 import  Terms  from './pages/Terms/Terms.component.js';
-import  Qualifications  from './pages/Qualifications/Qualifications.component.js';
 // import { Link } from 'react-router-dom'
 import  LoanType  from './pages/LoanType/LoanType.component.js';
 import Header from './components/Header/navbar.component';

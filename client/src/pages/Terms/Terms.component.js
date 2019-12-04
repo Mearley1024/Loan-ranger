@@ -9,19 +9,21 @@ import Col from 'react-bootstrap/Col'
 export default class Terms extends React.Component {
 
     state = {
-      loanAmount: '',
-      loanPurpose: '',
-      creditScore: '',      
+      institution: '',
+      loanType: '',
+      contactInfo: '',
+      phoneNumber: '',      
     }
 
     handleSubmit = (event) => {
       event.preventDefault();
-      let { loanAmount, loanPurpose, creditScore } =
+      let { institution, loanType, contactInfo, phoneNumber } =
       this.state
       let data = {
-        loanAmount,
-        loanPurpose,
-        creditScore
+        institution,
+        loanType,
+        contactInfo,
+        phoneNumber
       }
       console.log('data', data)
     }
@@ -49,33 +51,43 @@ export default class Terms extends React.Component {
                     
 
                     <Form.Group as={Col} controlId="formGridPassword">
-                      <Form.Label>Loan Amount</Form.Label>
+                      <Form.Label> Institution </Form.Label>
                         <Form.Control  
                           placeholder=""
                           onChange={this.handleInputChange}
-                          name='loanAmount'
-                          value={this.state.loanAmount} />
+                          name='institution'
+                          value={this.state.institution} />
                       </Form.Group>
                   </Form.Row>
 
                   <Form.Group controlId="formGridAddress1">
-                    <Form.Label>Loan Purpose</Form.Label>
+                    <Form.Label>Loan Type</Form.Label>
                     <Form.Control 
                         placeholder="" 
                         onChange={this.handleInputChange}
-                        name='loanPurpose'
-                        value={this.state.loanPurpose} />
+                        name='loanType'
+                        value={this.state.loanType} />
                   </Form.Group>
                 
 
                   <Form.Group controlId="formGridAddress2">
-                    <Form.Label>Credit Score</Form.Label>
+                    <Form.Label>Contact Information</Form.Label>
                     <Form.Control 
-                        placeholder=""  
+                        placeholder="email"  
                         onChange={this.handleInputChange}
-                        name='creditScore'
-                        value={this.state.creditScore} />
+                        name='contactInfo'
+                        value={this.state.contactInfo} />
                   </Form.Group> 
+
+                  <Form.Group controlId="formGridAddress2">
+                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Control 
+                        placeholder="#"  
+                        onChange={this.handleInputChange}
+                        name='phoneNumber'
+                        value={this.state.phoneNumber} />
+                  </Form.Group> 
+
 
   {/* <Link to=''> */}
   <Button variant="primary" type="submit">
