@@ -1,4 +1,4 @@
-// These are all of the idomatic functions we might use, can add more along the way
+// These are all of the idomatic functions you might use, straight from Auth0
 
 import React, { useState, useEffect, useContext } from "react";
 import createAuth0Client from "@auth0/auth0-spa-js";
