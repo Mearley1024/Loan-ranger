@@ -1,28 +1,36 @@
 {
   "name": "loan-ranger",
   "version": "0.0.0",
-  "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "npm run start:prod",
-    "start:dev:react": "cd ./client && npm start && cd ..",
-    "start:dev:node": " node ./bin/www",
-    "start:prod": "npm run start:prod:react && npm run start:prod:node",
-    "start:prod:react": "cd ./client && npm i && npm run build && cd ..",
-    "start:prod:node": "npm i && node ./bin/www"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "dependencies": {
     "axios": "^0.19.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
+    "mysql2": "^2.0.1",
     "node-sass": "^4.13.0",
     "path": "^0.12.7",
     "react": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
-    "reactstrap": "^8.1.1"
+    "reactstrap": "^8.1.1",
+    "if-env": "^1.0.4",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^1.19.4"
   }
 }
