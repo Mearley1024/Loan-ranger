@@ -1,5 +1,7 @@
 // src/components/Profile.js
 
+import LoanType1 from "../components/loanType/LoanType1.component";
+import LoanType2 from "../components/loanType/LoanType2.component";
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import { User } from "../components/User/User.js"
@@ -26,7 +28,7 @@ const Profile = () => {
   
   
 };
-export const User = (props) => {
+export const User1 = (props) => {
     const { key } = useAuth0();
     localStorage.setItem("userId" , key);
     return (
@@ -37,6 +39,6 @@ export const User = (props) => {
     }
   
 // localStorage.setItem("ID", Profile.code);
-console.log(User)
+console.log(User1)
 
 export default Profile;

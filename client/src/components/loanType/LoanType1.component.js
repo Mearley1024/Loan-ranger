@@ -29,8 +29,9 @@ export default  class LoanType1 extends React.Component {
       }
       console.log('data', data)
       axios.post('https://jsonplaceholder.typicode.com/posts', this.state)
-      .then(response => {console.log(response)
-          })
+      .then(response => {
+        sessionStorage.setItem("userLoanAnswers", response)        
+      })
           .catch(error => {console.log(error)
           })
 
@@ -96,11 +97,11 @@ export default  class LoanType1 extends React.Component {
                          />
                   </Form.Group> 
 
-                    {/* <Link to=''> */}
+                    <Link to='/Results'>
                       <Button variant="primary" type="submit">
                         Submit
                       </Button>
-                    {/* </Link> */}
+                    </Link>
                     
                 </Form>
 
